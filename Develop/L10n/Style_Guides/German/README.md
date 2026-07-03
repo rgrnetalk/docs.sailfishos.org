@@ -53,8 +53,8 @@ For example:
 
 Use the present tense. E.g.:
 
-  - Correct: **Das Gerät übernimmt Ihre Einstellungen**
-  - Incorrect: **Das Gerät wird Ihre Einstellungen übernehmen**
+  - Correct: **Das Gerät übernimmt deine Einstellungen**
+  - Incorrect: **Das Gerät wird deine Einstellungen übernehmen**
 
 ## Voice
 
@@ -63,7 +63,7 @@ Whenever possible, use the active voice. Keep the message clear and the sentence
 For example:
 
   - Correct: **Du kannst die Kontoeinstellungen in … festlegen.**
-  - Incorrect: **Die Kontoeinstellungen un di in … festgelegt.**
+  - Incorrect: **Die Kontoeinstellungen werden in … festgelegt.**
 
 ## Mood
 
@@ -71,7 +71,7 @@ Use the imperative form.
 
 For example:
 
-  - Correct: **Verwend du hierzu das Menü „Einstellungen“**
+  - Correct: **Verwende hierzu das Menü „Einstellungen“**
   - Incorrect: **Benutzer verwenden hierzu das Menü „Einstellungen“**
 
 ## Capitalisation
