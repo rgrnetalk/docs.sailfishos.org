@@ -98,13 +98,16 @@ Your application can link against the following libraries:
   - libdbus-1.so.3
   - libcurl.so.4
   - libfontconfig.so.1
-  - libssl.so.1.1
-  - libcrypto.so.1.1
   - liblzma.so.5
   - libxml2.so.2
   - libbz2.so.1
   - libexpat.so.1
   - libsqlite3.so.0
+
+### OpenSSL 3
+
+  - libcrypto.so.3
+  - libssl.so.3
 
 ### GLib
 
@@ -146,7 +149,7 @@ Your application can link against the following libraries:
 ### BluezQt
 
   - libKF5BluezQt.so.6
-    - We make no guarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
+    - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
 
 ## Allowed QML Imports
 
@@ -224,6 +227,8 @@ The exceptions to this rule are the following imports:
   - QtQuick.Window 2.1
   - QtQuick.Window 2.2
   - QtQuick.XmlListModel 2.0
+  - Qt.labs.folderlistmodel 2.1
+    - Supported since Sailfish OS 4.6.0
 
 ### Additional QML modules
 
@@ -271,6 +276,7 @@ The exceptions to this rule are the following imports:
   - Nemo.Configuration 1.0
   - Nemo.Thumbnailer 1.0
   - Nemo.KeepAlive 1.2
+  - Nemo.Time 1.0
   - org.nemomobile.contacts 1.0
     - We make no quarantees of backwards compatibility between releases. Supported since Sailfish OS 4.5.0.
 
@@ -355,6 +361,7 @@ Usually you shouldn't add library depencencies or python module dependencies to 
 
   - qt5-qtdeclarative-import-xmllistmodel
   - qt5-qtdeclarative-import-folderlistmodel
+  - qml(Qt.labs.folderlistmodel)
   - qt5-qtdeclarative-import-localstorageplugin
   - qt5-qtdeclarative-import-multimedia
   - qt5-qtdeclarative-import-websockets
@@ -362,12 +369,12 @@ Usually you shouldn't add library depencencies or python module dependencies to 
   - qt5-qtdeclarative-qtquickparticles
   - qt5-qtsvg
   - qt5-qtgraphicaleffects
-  - qt5-qtdeclarative-import-positioning
   - qt5-qtdeclarative-import-sensors
   - qt5-qtquickcontrols-layouts
   - qt5-qtdeclarative-import-models2
   - qt5-qtwebsockets
   - qml(QtLocation)
+  - qml(QtPositioning)
 
 ### Nemo QML Imports
 
@@ -399,12 +406,15 @@ Usually you shouldn't add library depencencies or python module dependencies to 
 ### Other libraries
 
   - mlite-qt5
-  - libcrypto.so.1.1
-  - libssl.so.1.1
   - liblzma.so.5
   - libbz2.so.1
   - libexpat.so.1
   - libsqlite3.so.0
+
+### OpenSSL 3
+
+  - libcrypto.so.3
+  - libssl.so.3
 
 ### Python support
 
@@ -460,14 +470,10 @@ Usually you shouldn't add library depencencies or python module dependencies to 
 
 The following libraries have been deprecated, and they should no longer be used in new code. They will be dropped from allowed libraries in a future release:
 
-### Deprecated from Sailfish OS 1.1.8.x onward
+### Deprecated in Sailfish OS 5.1
 
-  - libpng15.so.15
-
-### Deprecated in Sailfish OS 4.0.1
-
-  - libssl.so.10
-  - libcrypto.so.10
+  - libssl.so.1.1
+  - libcrypto.so.1.1
 
 ## Dropped libraries
 
@@ -476,6 +482,12 @@ The following libraries are no longer allowed:
 ### No longer allowed since Sailfish OS 4.5.0
 
   - libQt5WebKit.so.5
+
+### No longer allowed since Sailfish OS 5.1
+
+  - libpng15.so.15 
+  - libssl.so.10
+  - libcrypto.so.10
 
 ## Deprecated QML Imports
 
@@ -499,3 +511,14 @@ The following QML Imports are no longer allowed:
 ### No longer allowed since Sailfish OS 4.5.0
 
   - QtWebKit 3.0
+
+## Deprecated package dependencies
+
+The following package dependencies should now longer be used in new code. They will be dropped from allowed dependencies in a future release:
+
+### Deprecated in Sailfish OS 5.1
+
+  - libcrypto.so.1.1
+  - libssl.so.1.1
+  - qt5-qtdeclarative-import-positioning
+    - Use qml(QtPositioning) instead
